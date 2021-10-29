@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    Heading of the layout-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ScoreKeeper"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/title"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        ></TextView>
+
+<!--    Linear Layout for names of teams with orientation horizontal-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:orientation="horizontal"
+        android:id="@+id/team_a"
+        android:layout_marginTop="20dp">
+<!--  textview for the name of team A-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Team_A"
+            android:layout_weight="1"
+            android:textSize="20sp">
+
+        </TextView>
+<!--    Textview for team B-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Team_B"
+            android:layout_weight="1"
+            android:textSize="20sp">
+
+        </TextView>
+    </LinearLayout>
+<!-- This linear layout is for scores of the both teams-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/team_a"
+        android:orientation="horizontal"
+        android:id="@+id/team_b"
+        android:layout_marginTop="20dp">
+<!--first textview for team A score-->
+        <TextView
+            android:id="@+id/score_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Score"
+            android:textSize="20sp">
+
+        </TextView>
+
+<!--        second textview for team B score-->
+        <TextView
+            android:id="@+id/score_b"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Score"
+            android:textSize="20sp">
+
+        </TextView>
+    </LinearLayout>
+
+<!--    This layout is for inc and dec buttons-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/team_b"
+        android:orientation="horizontal"
+        android:id="@+id/inc_dec"
+        android:layout_marginTop="20dp">
+
+<!--        Buttons to increment & decrement the values for team A -->
+        <Button
+            android:id="@+id/inc_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:text="+"
+            android:textSize="20sp">
+
+        </Button>
+
+        <Button
+            android:id="@+id/dec_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="-"
+            android:textSize="20sp">
+
+        </Button>
+        <!--        Buttons to increment & decrement the values for team B -->
+        <Button
+            android:id="@+id/inc_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="0.5"
+            android:text="+"
+            android:textSize="20sp">
+
+        </Button>
+
+        <Button
+            android:id="@+id/dec_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="0.5"
+            android:text="-"
+            android:textSize="20sp">
+
+        </Button>
+    </LinearLayout>
+
+<!--    This textview represents that by given values we can change the score values -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="An amount to be changed"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/amount_change"
+        android:textSize="20sp"
+        android:layout_below="@+id/inc_dec"
+        android:layout_marginTop="15dp"
+        ></TextView>
+
+<!--    this layout is for radio buttons-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/amount_change"
+        android:id="@+id/amount_to_change">
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radio_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="1"
+                android:checked="true"
+                android:textSize="20sp"
+                 />
+
+            <RadioButton
+                android:id="@+id/radio_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:checked="false"
+                android:text="2"
+                android:textSize="20sp"
+               />
+
+            <RadioButton
+                android:id="@+id/radio_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:checked="false"
+                android:text="3"
+
+                android:textSize="20sp"
+                />
+
+            <RadioButton
+                android:id="@+id/radio_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:checked="false"
+                android:text="6"
+                android:textSize="20sp"
+                 />
+
+
+
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+<!--    this button to rest the scores of both teams-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/reset"
+        android:id="@+id/reset"
+        android:layout_below="@+id/amount_to_change"></Button>
+</RelativeLayout>
